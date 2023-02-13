@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+        <field
+            formid="phoneNumber"
+            mandatory="true"
+            max-length="15"
+            min-length="9"
+            missing-error="error.message.required"
+            range-error="error.message.range.phone.number.subscribe.product.form"
+            parse-error="error.message.parse.phone.number.subscribe.product.form"
+            regexp="^(\+?d+)?[\s*\d+]*$"
+            value-error="ValueErrorText"
+            type="string" />
+
+        <field
+            formid="productId"
+            mandatory="true"
+            missing-error="error.message.required"
+            type="string"/>
+</form>

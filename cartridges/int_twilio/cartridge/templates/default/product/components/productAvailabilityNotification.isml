@@ -1,0 +1,2 @@
+<isslot id="out-of-stock-notification" description="Out of stock notification slot" context="global" />
+<isinclude template="product/subscribeOutOfStock/subscribeOutOfStock" />

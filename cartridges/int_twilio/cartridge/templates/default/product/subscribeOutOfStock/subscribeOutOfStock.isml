@@ -1,0 +1,50 @@
+<isinclude template="/components/modules" />
+
+<button class="btn btn-block btn-primary show-subscribe-product-wrapper">
+    ${Resource.msg('button.show', 'subscribeOutOfStock', null)}
+</button>
+
+<iscomment> <div class="alert alert-success js-subscribe-success-message d-none" role="alert"></div>
+<div class="alert alert-danger js-subscribe-error-message d-none" role="alert"></div> </iscomment>
+
+<section class="container subscribe-product-wrapper mt-2">
+    <div class="row justify-content-center subscribe-product-form-wrapper d-none">
+        <div class="col">
+            <iscontentasset aid="back-in-stock-label" />
+
+<div class="alert alert-success js-subscribe-success-message d-none" role="alert"></div>
+<div class="alert alert-danger js-subscribe-error-message d-none" role="alert"></div>
+
+            <p>${Resource.msg('form.title', 'subscribeOutOfStock', null)}</p>
+            <form class="subscribe-product-form" action="${URLUtils.url('Twilio-Subscribe')}" method="POST" <isprint
+                value="${subscribeForm.attributes}" encoding="off" />>
+            <section
+                class="row no-gutters subscribe-product-form-fields-wrapper flex-nowrap flex-column flex-lg-row align-items-center">
+                <div class="col-lg-8 col-12 mb-0 mr-md-1 subscribe-product-form-input-wrapper form-group required">
+                    <input id="subscribe-product-form" type="text" class="form-control"
+                        aria-describedby="phoneNumberHelp"
+                        placeholder="${Resource.msg('label.input.subscribe.phoneNumber', 'subscribeOutOfStock', null)}"
+                        value="${pdict.phoneNumber}"
+                        data-range-error="${Resource.msg('error.message.parse.phone', 'subscribeOutOfStock', null)}"
+                        data-pattern-mismatch="${Resource.msg('error.message.parse.phone', 'subscribeOutOfStock', null)}"
+                        <isprint value=" ${subscribeForm.phoneNumber.attributes}" encoding="off" />/>
+                    <div class="invalid-feedback" role="alert" id="phoneNumberHelp"></div>
+                </div>
+
+                <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
+                <input type="hidden" class="subscribeFormProductId" value="${product.id}" <isprint value="${subscribeForm.productId.attributes}"
+                    encoding="off" />
+                />
+
+                <div class="row">
+                    <div class="col">
+                        <button type="submit" name="save"
+                            class="btn btn-save btn-block btn-primary">${Resource.msg('button.notify', 'subscribeOutOfStock', null)}</button>
+                    </div>
+                </div>
+
+            </section>
+            </form>
+        </div>
+    </div>
+</section>

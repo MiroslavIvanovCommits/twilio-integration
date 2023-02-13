@@ -1,0 +1,11 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.NotifyBackInStock",
+                "description": "Notify subscribed users for new stock of product and delete the subscription",
+                "module": "int_twilio/cartridge/scripts/steps/NotifyBackInStock"
+            }
+        ]
+    }
+}
