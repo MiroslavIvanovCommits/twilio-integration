@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+
+    <slot-configuration slot-id="out-of-stock-notification" context="global" configuration-id="New Slot Configuration - 2023-02-08 07:27:39" default="true" assigned-to-site="false">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="out-of-stock-description"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+</slot-configurations>

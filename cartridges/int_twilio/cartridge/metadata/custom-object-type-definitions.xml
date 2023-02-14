@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+
+    <custom-type type-id="NotifyMeBackInStock">
+        <staging-mode>no-staging</staging-mode>
+        <storage-scope>site</storage-scope>
+        <retention-days>30</retention-days>
+        <key-definition attribute-id="productId">
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <attribute-definitions>
+            <attribute-definition attribute-id="phoneNumbers">
+                <display-name xml:lang="x-default">Phone numbers</display-name>
+                <type>text</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="NotifyMeBackInStock">
+                <display-name xml:lang="x-default">NotifyMeBackInStock</display-name>
+                <attribute attribute-id="phoneNumbers"/>
+                <attribute attribute-id="productId"/>
+            </attribute-group>
+        </group-definitions>
+    </custom-type>
+
+</metadata>

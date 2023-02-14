@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs xmlns="http://www.demandware.com/xml/impex/jobs/2015-07-01">
+
+    <job job-id="NotifyBackInStock" priority="0">
+        <description>Notify subscribed users for new stock of product and delete the subscription</description>
+        <parameters/>
+        <split sequential="false">
+            <contexts template-ref="template_264">
+                <all-storefront-sites/>
+            </contexts>
+            <flow-template template-id="template_264">
+                <step step-id="NotifyBackInStock" type="custom.NotifyBackInStock" enforce-restart="false">
+                    <description>Notify subscribed users for new stock of product and delete the subscription</description>
+                    <parameters/>
+                </step>
+            </flow-template>
+        </split>
+        <rules>
+            <on-running runtime-threshold="60m" enabled="false">
+                <mark-job-as-hanging/>
+            </on-running>
+        </rules>
+        <triggers>
+            <run-recurring enabled="true">
+                <recurrence>
+                    <date-from>2023-02-09Z</date-from>
+                    <start-time>13:00:00.000Z</start-time>
+                    <interval>12h</interval>
+                    <day-of-week>
+                        <weekday>Sunday</weekday>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Tuesday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Monday</weekday>
+                        <weekday>Thursday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+</jobs>

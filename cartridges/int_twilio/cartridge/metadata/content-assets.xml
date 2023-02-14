@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31" library-id="RefArchSharedLibrary">
+
+  <content content-id="out-of-stock-description">
+    <display-name xml:lang="x-default">Out of stock description</display-name>
+    <display-name xml:lang="zh-CN">库存描述</display-name>
+    <display-name xml:lang="fr-FR">Description en rupture de stock</display-name>
+    <display-name xml:lang="it-IT">Descrizione fuori stock</display-name>
+    <display-name xml:lang="ja-JP">在庫のない説明</display-name>
+    <online-flag>true</online-flag>
+    <searchable-flag>false</searchable-flag>
+    <custom-attributes>
+      <custom-attribute attribute-id="body" xml:lang="x-default">&lt;span&gt;Do you want to be notified when item is back in stock?&lt;/span&gt;</custom-attribute>
+      <custom-attribute attribute-id="body" xml:lang="zh-CN">&lt;span&gt;物品恢复库存时，您是否想获得通知？&lt;/span&gt;</custom-attribute>
+      <custom-attribute attribute-id="body" xml:lang="fr-FR">&lt;span&gt;Voulez-vous être informé lorsque l'article est de retour en stock?&lt;/span&gt;</custom-attribute>
+      <custom-attribute attribute-id="body" xml:lang="it-IT">&lt;span&gt;Vuoi essere avvisato quando l'articolo è tornato in magazzino?&lt;/span&gt;</custom-attribute>
+      <custom-attribute attribute-id="body" xml:lang="ja-JP">&lt;span&gt;アイテムが戻ってきたときに通知されたいですか？&lt;/span&gt;</custom-attribute>
+    </custom-attributes>
+    <folder-links>
+    </folder-links>
+  </content>
+  
+</library>
