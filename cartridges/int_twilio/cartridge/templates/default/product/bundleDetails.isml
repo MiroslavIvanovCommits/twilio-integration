@@ -2,7 +2,6 @@
 
     <isscript>
         var assets = require('*/cartridge/scripts/assets');
-        assets.addJs('/js/productDetail.js');
         assets.addJs('/js/subscribeDialog.js');
         assets.addCss('/css/product/detail.css');
     </isscript>
@@ -79,14 +78,16 @@
                         <isinclude template="product/components/pricing/main" />
                     </div>
 
-                    <isif condition="${product.available}">
-                    <!-- Cart and [Optionally] Apple Pay -->
-                        <isinclude template="product/components/addToCartGlobal" />
-                    <iselse/>
-                    <!-- Product availability notification -->
-                        <isset name="subscribeForm" value="${pdict.forms.subscribeToProductForm}" scope="page" />
-                        <isinclude template="product/components/productAvailabilityNotification" />
-                    </isif>
+                            <!-- Cart and [Optionally] Apple Pay -->
+                            <div class="addToCartProduct ${product.available ? "" : " d-none"}">
+                                <isinclude template="product/components/addToCartProduct" />                                
+                            </div>
+
+                            <!-- Product availability notification -->
+                            <div class="productAvailabilityNotification ${!product.available ? "" : " d-none"}">
+                                <isset name="subscribeForm" value="${pdict.forms.subscribeToProductForm}" scope="page" />
+                                <isinclude template="product/components/productAvailabilityNotification" />                            
+                            </div>
                 </div>
 
                 <!-- Social Sharing Icons -->

@@ -32,8 +32,6 @@ $(function () {
  * Shows subscribeToProduct form and hides the show button.
  */
 
-var formValidation = require("base/components/formValidation");
-
 $(document).ready(function () {
     var $allSubscribeForms = $(".subscribe-product-form");
 

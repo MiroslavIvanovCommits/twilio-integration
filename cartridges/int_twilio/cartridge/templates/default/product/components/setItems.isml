@@ -1,9 +1,3 @@
-<isscript>
-    var assets = require('*/cartridge/scripts/assets');
-    assets.addJs('/js/productDetail.js');
-    assets.addJs('/js/subscribeDialog.js');
-</isscript>
-
 <div class="set-items" itemtype="http://schema.org/SomeProducts" itemid="#product">
     <isloop items="${productCopy.individualProducts}" var="productItem" status="loopState">
         <isset name="product" value="${productItem}" scope="page" />
